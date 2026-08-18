@@ -389,7 +389,7 @@ export default function CoverageMap() {
 
         {/* ==== BARA DE SUS: căutare + acțiuni ==== */}
         <div className="pointer-events-none absolute inset-x-0 top-0 z-[600] flex flex-wrap items-start gap-2 p-3">
-          <div className="pointer-events-auto flex min-w-[190px] flex-1 items-center gap-2 rounded-full border border-white/15 bg-black/60 px-3 py-2 text-white backdrop-blur">
+          <div className="pointer-events-auto flex min-w-[150px] flex-1 items-center gap-2 rounded-full border border-white/15 bg-black/60 px-3 py-2 text-white backdrop-blur">
             <Search className="size-3.5 shrink-0 opacity-70" />
             <input
               value={query}
@@ -404,7 +404,7 @@ export default function CoverageMap() {
             )}
           </div>
 
-          <div className="pointer-events-auto flex items-center gap-1.5">
+          <div className="pointer-events-auto flex flex-wrap items-center justify-end gap-1.5">
             <button
               onClick={locate}
               className="vm-ctrl"
