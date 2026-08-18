@@ -10,7 +10,7 @@ import {
   Star,
 } from "lucide-react";
 
-
+import heroImg from "@/assets/hero-duba.jpg";
 
 
 import { Btn, BtnLink, SectionLabel } from "@/components/site/ui";
