@@ -20,6 +20,7 @@ import { GoogleMark } from "@/components/site/GoogleMark";
 import { CoverageMapSection } from "@/components/site/CoverageMapSection";
 import { ContactForm } from "@/components/site/ContactForm";
 import { ServicesSection } from "@/components/site/ServicesSection";
+import { GallerySection } from "@/components/site/GallerySection";
 import {
   ADDRESS,
   EMAIL,
