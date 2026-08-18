@@ -58,7 +58,7 @@ export function CoverageMapSection() {
               <Suspense
                 fallback={<div className="h-[460px] w-full animate-pulse bg-surface" aria-hidden="true" />}
               >
-                <div className="[&_.leaflet-container]:h-[460px] [&_.leaflet-container]:transition-[filter] dark:[&_.leaflet-container]:brightness-[.82] dark:[&_.leaflet-container]:contrast-[1.05] dark:[&_.leaflet-container]:saturate-[.85]">
+                <div className="[&_.leaflet-container]:transition-[filter] dark:[&_.leaflet-container]:brightness-[.9] dark:[&_.leaflet-container]:contrast-[1.03]">
                   <CoverageMap />
                 </div>
               </Suspense>
@@ -66,30 +66,6 @@ export function CoverageMapSection() {
               <div className="h-[460px] w-full bg-surface" aria-hidden="true" />
             )}
 
-            {/* overlay premium */}
-            <div className="pointer-events-none absolute inset-x-0 top-0 z-[500] flex items-start justify-between p-4">
-              <span className="pointer-events-auto inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/55 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur">
-                <Navigation className="size-3.5" /> Bază: Constanța
-              </span>
-              <a
-                href={`tel:${TEL}`}
-                className="pointer-events-auto inline-flex items-center gap-2 rounded-full bg-brand px-3.5 py-1.5 text-xs font-bold text-white shadow-lg transition-transform hover:scale-105"
-              >
-                <Phone className="size-3.5" /> Cere intervenție
-              </a>
-            </div>
-
-            <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[500] h-24 bg-gradient-to-t from-black/35 to-transparent" />
-            <div className="pointer-events-none absolute bottom-4 left-4 z-[500] flex gap-2">
-              {mapRings.map((r, i) => (
-                <span
-                  key={r.km}
-                  className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-black/55 px-2.5 py-1 text-[11px] font-medium text-white backdrop-blur"
-                >
-                  <span className={`size-2 rounded-full ${ringTones[i]}`} /> {r.minutes}
-                </span>
-              ))}
-            </div>
           </div>
         </div>
 
