@@ -11,15 +11,14 @@ import {
 } from "lucide-react";
 
 import heroImg from "@/assets/hero-duba.jpg";
-import ziImg from "@/assets/interventie-zi.jpg";
-import noapteImg from "@/assets/interventie-noapte.jpg";
-import camionImg from "@/assets/camion.jpg";
+
 
 import { Btn, BtnLink, SectionLabel } from "@/components/site/ui";
 import { GoogleMark } from "@/components/site/GoogleMark";
 import { CoverageMapSection } from "@/components/site/CoverageMapSection";
 import { ContactForm } from "@/components/site/ContactForm";
 import { ServicesSection } from "@/components/site/ServicesSection";
+import { GallerySection } from "@/components/site/GallerySection";
 import {
   ADDRESS,
   EMAIL,
@@ -78,32 +77,6 @@ export const Route = createFileRoute("/")({
   }),
 });
 
-const gallery = [
-  {
-    src: ziImg,
-    alt: "Reparație de pană auto pe marginea drumului în Constanța",
-    title: "Intervenție pe traseu",
-    desc: "Reparație rapidă direct pe marginea drumului, fără platformă.",
-  },
-  {
-    src: noapteImg,
-    alt: "Intervenție de vulcanizare mobilă noaptea într-o parcare din Constanța",
-    title: "Intervenție nocturnă",
-    desc: "Schimb de roată seara, direct lângă mașina clientului.",
-  },
-  {
-    src: camionImg,
-    alt: "Schimb de anvelopă la un camion pe autostradă",
-    title: "Camioane și flote",
-    desc: "Echipament profesional pentru TIR-uri și autoutilitare.",
-  },
-  {
-    src: heroImg,
-    alt: "Duba de vulcanizare mobilă noaptea pe stradă în Constanța",
-    title: "Duba de intervenție",
-    desc: "Autospeciala noastră, pregătită pentru ieșiri rapide 24/7.",
-  },
-];
 
 function Index() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
@@ -209,33 +182,7 @@ function Index() {
 
 
       {/* Galerie */}
-      <section id="galerie" className="mx-auto max-w-6xl px-5 py-20">
-        <SectionLabel>Galerie · Intervenții reale</SectionLabel>
-        <h2 className="mt-3 max-w-xl text-4xl font-extrabold tracking-tight">
-          Poze reale din intervențiile noastre.
-        </h2>
-        <p className="mt-4 max-w-2xl text-muted-foreground">
-          Imagini din teren, cu duba noastră și lucrări făcute direct la client, pe autostradă sau în oraș.
-        </p>
-        <div className="mt-10 grid gap-5 sm:grid-cols-2">
-          {gallery.map((g) => (
-            <figure key={g.title} className="overflow-hidden rounded-3xl border border-border bg-card">
-              <img
-                src={g.src}
-                alt={g.alt}
-                loading="lazy"
-                width={1000}
-                height={750}
-                className="h-60 w-full object-cover"
-              />
-              <figcaption className="p-5">
-                <p className="font-bold">{g.title}</p>
-                <p className="mt-1 text-sm text-muted-foreground">{g.desc}</p>
-              </figcaption>
-            </figure>
-          ))}
-        </div>
-      </section>
+      <GallerySection />
 
       {/* Hartă acoperire */}
       <div className="border-y border-border bg-surface">
