@@ -10,10 +10,8 @@ import {
   Star,
 } from "lucide-react";
 
-import heroImg from "@/assets/hero-duba.jpg";
-import ziImg from "@/assets/interventie-zi.jpg";
-import noapteImg from "@/assets/interventie-noapte.jpg";
-import camionImg from "@/assets/camion.jpg";
+
+
 
 import { Btn, BtnLink, SectionLabel } from "@/components/site/ui";
 import { GoogleMark } from "@/components/site/GoogleMark";
