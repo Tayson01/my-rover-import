@@ -482,12 +482,6 @@ export default function CoverageMap() {
             >
               {fullscreen ? <Minimize2 className="size-3.5" /> : <Maximize2 className="size-3.5" />}
             </button>
-            <a
-              href={`tel:${TEL}`}
-              className="inline-flex items-center gap-1.5 rounded-full bg-brand px-3 py-1.5 text-xs font-bold text-white shadow-lg transition-transform hover:scale-105"
-            >
-              <Phone className="size-3.5" /> Cere intervenție
-            </a>
           </div>
         </div>
 
@@ -533,6 +527,14 @@ export default function CoverageMap() {
             </div>
           </div>
         )}
+
+        {/* ==== CTA TELEFON ==== */}
+        <a
+          href={`tel:${TEL}`}
+          className="absolute bottom-14 left-3 z-[600] inline-flex items-center gap-1.5 rounded-full bg-brand px-3.5 py-2 text-xs font-bold text-white shadow-lg transition-transform hover:scale-105"
+        >
+          <Phone className="size-3.5" /> Cere intervenție
+        </a>
 
         {/* ==== LEGENDĂ + ZOOM ==== */}
         <div className="pointer-events-none absolute bottom-3 left-1/2 z-[600] flex -translate-x-1/2 flex-wrap justify-center gap-1.5">
