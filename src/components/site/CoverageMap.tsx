@@ -22,6 +22,7 @@ import {
   Maximize2,
   Minimize2,
   MousePointerClick,
+  Phone,
   Route as RouteIcon,
   Ruler,
   Search,
@@ -481,6 +482,12 @@ export default function CoverageMap() {
             >
               {fullscreen ? <Minimize2 className="size-3.5" /> : <Maximize2 className="size-3.5" />}
             </button>
+            <a
+              href={`tel:${TEL}`}
+              className="inline-flex items-center gap-1.5 rounded-full bg-brand px-3 py-1.5 text-xs font-bold text-white shadow-lg transition-transform hover:scale-105"
+            >
+              <Phone className="size-3.5" /> Cere intervenție
+            </a>
           </div>
         </div>
 
