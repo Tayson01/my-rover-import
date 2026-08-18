@@ -1,7 +1,7 @@
 import { Suspense, lazy, useEffect, useState } from "react";
 import { Clock, MapPin, Radar, Route as RouteIcon } from "lucide-react";
 
-import { PHONE, mapRings, zones } from "@/lib/site-data";
+import { PHONE, TEL, mapRings, zones } from "@/lib/site-data";
 
 const CoverageMap = lazy(() => import("./CoverageMap"));
 
