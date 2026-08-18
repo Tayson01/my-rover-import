@@ -161,7 +161,6 @@ export default function CoverageMap() {
   const [geoError, setGeoError] = useState<string | null>(null);
   const [zoom, setZoom] = useState(9);
   const [fullscreen, setFullscreen] = useState(false);
-  const [cursor, setCursor] = useState<LatLngTuple | null>(null);
 
   const layer = TILE_LAYERS[tiles];
 
@@ -315,7 +314,6 @@ export default function CoverageMap() {
               radius={active === z.slug ? 10 : 7}
               eventHandlers={{
                 click: () => setActive(z.slug),
-                mouseover: () => setCursor(z.coords),
               }}
               pathOptions={{
                 color: "#ffffff",
@@ -575,8 +573,6 @@ export default function CoverageMap() {
             )}
           </ul>
         </div>
-
-        {cursor && null}
       </div>
     </div>
   );
