@@ -78,32 +78,6 @@ export const Route = createFileRoute("/")({
   }),
 });
 
-const gallery = [
-  {
-    src: ziImg,
-    alt: "Reparație de pană auto pe marginea drumului în Constanța",
-    title: "Intervenție pe traseu",
-    desc: "Reparație rapidă direct pe marginea drumului, fără platformă.",
-  },
-  {
-    src: noapteImg,
-    alt: "Intervenție de vulcanizare mobilă noaptea într-o parcare din Constanța",
-    title: "Intervenție nocturnă",
-    desc: "Schimb de roată seara, direct lângă mașina clientului.",
-  },
-  {
-    src: camionImg,
-    alt: "Schimb de anvelopă la un camion pe autostradă",
-    title: "Camioane și flote",
-    desc: "Echipament profesional pentru TIR-uri și autoutilitare.",
-  },
-  {
-    src: heroImg,
-    alt: "Duba de vulcanizare mobilă noaptea pe stradă în Constanța",
-    title: "Duba de intervenție",
-    desc: "Autospeciala noastră, pregătită pentru ieșiri rapide 24/7.",
-  },
-];
 
 function Index() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
