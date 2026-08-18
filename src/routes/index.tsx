@@ -39,17 +39,17 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Lovable App" },
+      { title: "Vulcanizare Mobilă Constanța – Intervenții 24/7" },
       {
         name: "description",
         content:
-          "A",
+          "Vulcanizare mobilă în Constanța și zonele limitrofe: intervenții rapide 24/7 pentru autoturisme, camioane și flote, direct la locația ta.",
       },
-      { property: "og:title", content: "Lovable App" },
+      { property: "og:title", content: "Vulcanizare Mobilă Constanța – Intervenții 24/7" },
       {
         property: "og:description",
         content:
-          "A",
+          "Intervenții rapide 24/7 pentru autoturisme, camioane și flote, direct la locația ta în Constanța.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
