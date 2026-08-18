@@ -252,17 +252,6 @@ function Index() {
         </div>
       </section>
 
-      {/* Statistici */}
-      <section className="border-y border-border bg-surface">
-        <div className="mx-auto grid max-w-6xl gap-8 px-5 py-14 sm:grid-cols-2 lg:grid-cols-4">
-          {stats.map((s) => (
-            <div key={s.label}>
-              <p className="text-4xl font-extrabold text-brand">{s.value}</p>
-              <p className="mt-2 text-sm text-muted-foreground">{s.label}</p>
-            </div>
-          ))}
-        </div>
-      </section>
 
       {/* Galerie */}
       <section id="galerie" className="mx-auto max-w-6xl px-5 py-20">
