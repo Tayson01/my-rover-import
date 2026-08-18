@@ -16,10 +16,10 @@ import noapteImg from "@/assets/interventie-noapte.jpg";
 import camionImg from "@/assets/camion.jpg";
 
 import { Btn, BtnLink, SectionLabel } from "@/components/site/ui";
-import { ServiceIcon } from "@/components/site/ServiceIcon";
 import { GoogleMark } from "@/components/site/GoogleMark";
 import { CoverageMapSection } from "@/components/site/CoverageMapSection";
 import { ContactForm } from "@/components/site/ContactForm";
+import { ServicesSection } from "@/components/site/ServicesSection";
 import {
   ADDRESS,
   EMAIL,
@@ -31,7 +31,6 @@ import {
   faqs,
   reviews,
   services,
-  stats,
   zones,
 } from "@/lib/site-data";
 
@@ -205,64 +204,9 @@ function Index() {
       </section>
 
       {/* Servicii */}
-      <section id="servicii" className="mx-auto max-w-6xl px-5 py-20">
-        <SectionLabel>Servicii</SectionLabel>
-        <h2 className="mt-3 max-w-xl text-4xl font-extrabold tracking-tight">
-          Tot ce ai nevoie, într-un singur loc.
-        </h2>
-        <p className="mt-4 max-w-2xl text-muted-foreground">
-          De la pene neașteptate pe drum până la întreținere programată — echipa noastră mobilă din Constanța
-          se ocupă de tot.
-        </p>
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((s) => (
-            <div
-              key={s.slug}
-              className="flex flex-col rounded-3xl border border-border bg-card p-6 transition-all hover:-translate-y-1 hover:shadow-card"
-            >
-              <span className="flex size-11 items-center justify-center rounded-2xl bg-brand-soft text-brand">
-                <ServiceIcon name={s.icon} />
-              </span>
-              <h3 className="mt-5 text-lg font-bold">{s.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
-              <BtnLink
-                to="/servicii/$slug"
-                params={{ slug: s.slug }}
-                variant="ghost"
-                className="mt-4 self-start px-4 py-2"
-              >
-                Află mai mult →
-              </BtnLink>
-            </div>
-          ))}
-        </div>
-        <div className="mt-8 flex flex-wrap items-center justify-between gap-4 rounded-3xl bg-brand p-7 text-brand-foreground">
-          <div>
-            <p className="text-lg font-bold">Nu găsești ce cauți?</p>
-            <p className="text-sm opacity-90">
-              Sună-ne și îți oferim o soluție personalizată în câteva minute.
-            </p>
-          </div>
-          <a
-            href={`tel:${TEL}`}
-            className="inline-flex items-center gap-2 rounded-xl bg-card px-5 py-3 text-sm font-semibold text-foreground"
-          >
-            <Phone className="size-4" /> Contactează-ne
-          </a>
-        </div>
-      </section>
+      <ServicesSection />
 
-      {/* Statistici */}
-      <section className="border-y border-border bg-surface">
-        <div className="mx-auto grid max-w-6xl gap-8 px-5 py-14 sm:grid-cols-2 lg:grid-cols-4">
-          {stats.map((s) => (
-            <div key={s.label}>
-              <p className="text-4xl font-extrabold text-brand">{s.value}</p>
-              <p className="mt-2 text-sm text-muted-foreground">{s.label}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+
 
       {/* Galerie */}
       <section id="galerie" className="mx-auto max-w-6xl px-5 py-20">
