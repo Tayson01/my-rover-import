@@ -16,10 +16,10 @@ import noapteImg from "@/assets/interventie-noapte.jpg";
 import camionImg from "@/assets/camion.jpg";
 
 import { Btn, BtnLink, SectionLabel } from "@/components/site/ui";
-import { ServiceIcon } from "@/components/site/ServiceIcon";
 import { GoogleMark } from "@/components/site/GoogleMark";
 import { CoverageMapSection } from "@/components/site/CoverageMapSection";
 import { ContactForm } from "@/components/site/ContactForm";
+import { ServicesSection } from "@/components/site/ServicesSection";
 import {
   ADDRESS,
   EMAIL,
@@ -31,7 +31,6 @@ import {
   faqs,
   reviews,
   services,
-  stats,
   zones,
 } from "@/lib/site-data";
 
