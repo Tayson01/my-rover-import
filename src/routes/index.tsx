@@ -209,33 +209,7 @@ function Index() {
 
 
       {/* Galerie */}
-      <section id="galerie" className="mx-auto max-w-6xl px-5 py-20">
-        <SectionLabel>Galerie · Intervenții reale</SectionLabel>
-        <h2 className="mt-3 max-w-xl text-4xl font-extrabold tracking-tight">
-          Poze reale din intervențiile noastre.
-        </h2>
-        <p className="mt-4 max-w-2xl text-muted-foreground">
-          Imagini din teren, cu duba noastră și lucrări făcute direct la client, pe autostradă sau în oraș.
-        </p>
-        <div className="mt-10 grid gap-5 sm:grid-cols-2">
-          {gallery.map((g) => (
-            <figure key={g.title} className="overflow-hidden rounded-3xl border border-border bg-card">
-              <img
-                src={g.src}
-                alt={g.alt}
-                loading="lazy"
-                width={1000}
-                height={750}
-                className="h-60 w-full object-cover"
-              />
-              <figcaption className="p-5">
-                <p className="font-bold">{g.title}</p>
-                <p className="mt-1 text-sm text-muted-foreground">{g.desc}</p>
-              </figcaption>
-            </figure>
-          ))}
-        </div>
-      </section>
+      <GallerySection />
 
       {/* Hartă acoperire */}
       <div className="border-y border-border bg-surface">
