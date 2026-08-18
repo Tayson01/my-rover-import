@@ -1,7 +1,7 @@
 import { Suspense, lazy, useEffect, useState } from "react";
-import { Clock, MapPin, Navigation, Phone, Radar, Route as RouteIcon } from "lucide-react";
+import { Clock, MapPin, Radar, Route as RouteIcon } from "lucide-react";
 
-import { PHONE, TEL, mapRings, zones } from "@/lib/site-data";
+import { PHONE, mapRings, zones } from "@/lib/site-data";
 
 const CoverageMap = lazy(() => import("./CoverageMap"));
 
@@ -56,14 +56,14 @@ export function CoverageMapSection() {
           <div className="relative overflow-hidden rounded-[26px] border border-border/60 bg-card">
             {mounted ? (
               <Suspense
-                fallback={<div className="h-[460px] w-full animate-pulse bg-surface" aria-hidden="true" />}
+                fallback={<div className="h-[540px] w-full animate-pulse bg-surface" aria-hidden="true" />}
               >
                 <div className="[&_.leaflet-container]:transition-[filter] dark:[&_.leaflet-container]:brightness-[.9] dark:[&_.leaflet-container]:contrast-[1.03]">
                   <CoverageMap />
                 </div>
               </Suspense>
             ) : (
-              <div className="h-[460px] w-full bg-surface" aria-hidden="true" />
+              <div className="h-[540px] w-full bg-surface" aria-hidden="true" />
             )}
 
           </div>

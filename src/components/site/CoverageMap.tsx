@@ -237,7 +237,7 @@ export default function CoverageMap() {
       className={
         fullscreen
           ? "fixed inset-0 z-[9999] bg-background p-3 sm:p-5"
-          : "relative h-[460px] w-full"
+          : "relative h-[540px] w-full"
       }
     >
       <div className="relative h-full w-full overflow-hidden rounded-2xl">
